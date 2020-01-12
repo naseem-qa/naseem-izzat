@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav id=flex>
+        <p id="pa">NASA MAKEUP<sup>©</sup><p>
+                <div id="link">
+                    <a id="ma" href="/makeup">Home</a>
+                    <a href="/">Favourite</a>
+                    <a href="/views/pages/footer.ejs">Contact Us</a>
+                </div>
+    </nav>
+    <style>
+       
+        #flex {
+            background-color: black;
+            color: white;
+            font-family: 'Bebas Neue', cursive;
+            position: fixed;
+            right: 0;
+            left: 0;
+            top: 0;
+            z-index:5;
+        }
+
+        #link {
+            margin-left: 950px;
+        }
+
+        #flex {
+            display: flex;
+            align-items: baseline;
+        }
+
+        #pa {
+            padding-left: 10px;
+            padding-top: 20px;
+            padding-bottom: 10px;
+            letter-spacing: 2px;
+            font-size: large;
+
+        }
+
+        #pa:hover {
+            color: rgb(255, 31, 255);
+        }
+
+        a:link {
+            text-decoration: none;
+            padding: 0px 10px;
+
+        }
+
+        a:visited {
+            text-decoration: none;
+            color: white;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: rgb(255, 31, 255);
+        }
+
+        a:active {
+            text-decoration: underline;
+        }
+
+        a:link {
+            color: white;
+            letter-spacing: 2px;
+
+        }
+
+        
+    </style>
+</body>
+
+</html>

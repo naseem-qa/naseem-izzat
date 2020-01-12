@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="../css/favorite.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <%- include('./header')%>
+    <main>
+        <h1>My Favourites Products </h1>
+        <hr>
+        <div id="all">
+            <ul id="choose">
+                <% searchResults.forEach(product => { %>
+                <li id="li">
+                    <div><img src="<%= product.image_link %>"></div>
+                    <div><%= product.name %></div>
+                    <div><%= product.brand %></div>
+
+                    <form action="/product/<%= product.id%>" method="get">
+                        <button id="button"> View Details </button>
+                    </form>
+                </li>
+
+                <% }) %>
+                </ulid="choose">
+        </div>
+    </main>
+    <%- include('./footer')%>
+
+    <style>
+        footer{
+            position: fixed;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            overflow:hidden;
+        }
+    </style>
+</body>
+
+</html>

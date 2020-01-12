@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="../css/edite.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+</head>
+
+<body>
+    <%- include('./header')%>
+
+    <main>
+        <h1>Update</h1>
+        <hr>
+        <div id="form">
+        <form action="/update/<%= product.id %>" method="post">
+            <input type="hidden" name="_method" value="put">
+            <input type="hidden" name="id" value="<%- product.id %>">
+
+            <label >Product Name</label>
+            <input type="text" name="name" placeholder="name" value="<%= product.name %>">
+
+            <label >Image_Link</label>
+            <input type="text" name="image_link" placeholder="image" value="<%= product.image_link %>">
+            
+            <label >Brand</label>
+            <input type="text" name="brand" placeholder="brand" value="<%= product.brand %>">
+            
+            <label >Category</label>
+            <input type="text" name="category" placeholder="category" value="<%= product.category %>">
+           
+            <label >Description</label>
+            <input id="desc" type="text" name="description" placeholder="description" value="<%=product.description%>">
+            
+            <label >Product_Link</label>
+            <input type="text" name="product_link" placeholder="product_link" value="<%=product.product_link%>">
+            
+            <label >NOTE</label>
+            <input type="text" name="price" placeholder="NOTE" value="<%= product.price %>">
+           
+            <div>
+                <input id="submit" type="submit" value="Update product"></input>
+
+            </div>
+        </form>
+    </div>
+    </main>
+    <%- include('./footer')%>
+
+</body>
+
+</html>

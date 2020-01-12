@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/form1.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <%- include('./header')%>
+    <main>
+        <div id="form">
+            <h1>NASA MAKEUP</h1>
+            <form action="/makeup" method="POST">
+                <label>
+                    <input type="text" placeholder='Type Brand Name' name="brand">
+                </label><br>
+                <!-- <label>
+                    <input type="text" placeholder='Type Product Name' name="product_type">
+                </label><br> -->
+                <select id="option" name="product_type" >
+                    <option value=""> Product Name </option>
+                    <option value="Blush">Blush</option>
+                    <option value="Bronzer">Bronzer</option>
+                    <option value="Eyebrow">Eyebrow</option>
+                    <option value="Eyeliner">Eyeliner</option>
+                    <option value="Eyeshadow">Eyeshadow</option>
+                    <option value="Foundation">Foundation</option>
+                    <option value="Lip liner">Lip liner</option>
+                    <option value="Lipstick">Lipstick</option>
+                    <option value="Mascara">Mascara</option>
+                    <option value="Nail polish">Nail polish</option>
+                    </select><br>
+
+                <input id="submit" type="submit" value="Search">
+            </form>
+        </div>
+    </main>
+    <%- include('./footer')%>
+
+</body>
+
+</html>

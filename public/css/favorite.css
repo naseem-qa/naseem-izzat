@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-size: 100% 100%;
+    position: relative;
+    background-image: url(https://img2.akspic.ru/image/147206-cvet-roza-persik-pryamougolnik-vektornaya_grafika-2560x1600.jpg);
+}
+
+h1{
+    font-size: 40px;
+    letter-spacing: 8px;
+    font-style: normal;
+    padding: 10px;
+    color: rgb(17, 12, 12);
+    margin-top:5%;
+    text-align: center;
+    font-family: 'Bebas Neue', cursive;
+    text-shadow: white 3px 3px;
+}
+
+hr {
+    border: 1px solid rgb(2, 2, 2);
+    border-radius: 10px;
+    width: 50%;
+    margin: 20px auto;
+}
+
+#choose {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    list-style-type: none;
+}
+
+#all {
+    width: 900px;
+    margin: auto ;
+    position: relative;
+    margin-bottom: 40px;
+
+}
+
+#li {
+    width: 40%;
+    /* border: 1px solid black; */
+    text-align: center;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 20px;
+    -webkit-transition: width 2s, height 4s;
+    transition: width 2s, height 4s;
+  }
+
+#li:hover {
+    width: 400px;
+    height: 400px;}
+
+#li img {
+    width: 50%;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+#button {
+    margin-bottom: 30px;
+    background: transparent;
+    border-radius: 5px;
+    border: 3px solid #0c0b0b;
+    color: rgb(17, 12, 12);
+    /* font-weight: bolder; */
+    font-size: 20px;
+    transition: all 0.4s ease-in-out;
+    font-family: 'Bebas Neue', cursive;
+}
+
+#button:hover {
+    background-color: #f5f3f3;
+}
