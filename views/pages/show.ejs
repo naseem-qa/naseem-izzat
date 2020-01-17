@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/show.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <%- include('./header')%>
+    <main>
+        <h2>TOP PICKS</h2>
+        <hr>
+        <div id="all">
+            <ul id="choose">
+                <% searchResults.forEach(product => { %>
+                <li data-id="<%= product.id %>" id="li">
+                    <div><img src="<%= product.image_link %>"></div>
+                    <div id="text">Product name :<%= product.name %></div>
+                    <div class="text">Brand:<%= product.brand %></div>
+                    <!-- <div>Category:<%= product.category %></div> -->
+                    <div class="text">Price:<%= product.price %>$</div>
+                    <!-- <div><%= product.rating %></div> -->
+                    <!-- <div><%=product.description%></div> -->
+                    <div><a href="<%=product.product_link%>"> Product Info</a></div>
+                    <div><a href="<%=product.website_link%>">Website Link</a></div>
+                    
+
+                        <div>
+                            <form action="/select" method="post">
+                                <input type="hidden" name="id" value="<%= product.id %>">
+                                <input type="hidden" name="name" value="<%= product.name %>">
+                                <input type="hidden" name="image_link" value="<%= product.image_link %>">
+                                <input type="hidden" name="brand" value="<%= product.brand %>">
+                                <input type="hidden" name="category" value="<%= product.category %>">
+                                <input type="hidden" name="price" value="<%= product.price %>">
+                                <input type="hidden" name="description" value="<%=product.description%>">
+                                <input type="hidden" name="product_link" value="<%=product.product_link%>">
+                                <button id="button"> Add To My Favorite</button>
+                            </form>
+                        </div>
+                        <% }) %>
+                </li>
+            </ul>
+        </div>
+    </main>
+    <%- include('./footer')%>
+</body>
+
+</html>

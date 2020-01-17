@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/index.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <%- include('./header')%>
+    <main>
+        <h1>Product Information</h1>
+        <hr>
+        <div id="form">
+            <form action="/save" method="post">
+                <input type="hidden" name="id" value="<%= product.id %>">
+                <label >Product Name</label>
+                <input type="text" name="name" value="<%= product.name %>">
+                <label >Image_Link</label>
+                <input type="text" name="image_link" value="<%= product.image_link %>">
+                <label >Brand</label>
+                <input type="text" name="brand" value="<%= product.brand %>">
+                <label >Category</label>
+                <input type="text" name="category" value="<%= product.category %>">
+                <label >price</label>
+                <input type="text" name="price " value="<%= product.price %>">
+                <label >Description</label>
+                <input id="des" type="text" name="description" value="<%=product.description%>">
+                <label >Product_Link</label>
+                <input type="text" name="product_link" value="<%=product.product_link%>">
+                <br>
+                <button >Save</button>
+            </form>
+        </div>
+    </main>
+    <%- include('./footer')%>
+
+</body>
+
+
+</html>

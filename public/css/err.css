@@ -1,0 +1,20 @@
+
+
+
+h1{
+    
+        font-size: 40px;
+        letter-spacing: 8px;
+        font-style: normal;
+        padding: 10px;
+        color: rgb(17, 12, 12);
+        margin-top: 5%;
+        text-align: center;
+        font-family: 'Bebas Neue', cursive;
+        text-shadow: white 3px 3px;
+    }
+
+img{
+      margin-left: 22%;
+      height:470px;
+}
