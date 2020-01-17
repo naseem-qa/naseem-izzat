@@ -8,8 +8,13 @@ h1{
         font-style: normal;
         padding: 10px;
         color: rgb(17, 12, 12);
-        margin-top:5%;
+        margin-top: 5%;
         text-align: center;
         font-family: 'Bebas Neue', cursive;
-        text-shadow: rgb(253, 138, 209) 3px 3px;
+        text-shadow: white 3px 3px;
+    }
+
+img{
+      margin-left: 22%;
+      height:470px;
 }

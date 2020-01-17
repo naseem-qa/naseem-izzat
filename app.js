@@ -9,7 +9,7 @@ const express = require('express');
 const cors = require('cors');
 const pg = require('pg');
 const methodOverride = require('method-override');
-const expressLayouts = require('express-ejs-layouts')
+const expressLayouts = require('express-ejs-layouts');
 
 // Database Setup
 const client = new pg.Client(process.env.DATABASE_URL);
@@ -40,7 +40,6 @@ app.use(methodOverride((req, res) => {
 // API routes
 app.get('/makeup', getform);
 app.post('/makeup', findProduct);
-// app.post('/details', productHandler);
 app.post('/select', productSelect);
 app.post('/save', saveProduct);
 app.get('/', getproduct);
@@ -48,7 +47,12 @@ app.get('/product/:product_id', oneProduct);
 app.post('/update', getUpdateForm)
 app.put('/update/:product_id', updateSaved);
 app.delete('/delete/:product_id', deleteProduct);
-
+app.get('/contact',getContact);
+// app.post('/contact',sendEmail)
+//////////////////////////////////////
+function getContact(req,res){
+    res.render('pages/contact');
+}
 
 
 function getform(req, res) {
@@ -160,6 +164,10 @@ function MakeUp(data) {
     //  this.product_colors=data.product_colors;
 
 }
+
+// var player = require('play-sound')
+// player.play('./media/WhatsApp Audio 2020-01-13 at 17.45.43.mp3');
+
 ////////error
 function errorHandler(err, res) {
     // console.log(err);

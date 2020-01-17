@@ -3,36 +3,10 @@
   padding: 0;
   box-sizing: border-box;
 }
-/* 
-@media only screen and (min-width: 1200px) {
-  body {
-    background-image: url(https://d.wpimg.pl/48195718--2104334001/kosmetyki.jpg)
-  }
-} */
-
-/* @media only screen and (max-width: 600px) {
-  body {
-    background-image: url(https://image.freepik.com/free-photo/high-angle-view-various-makeup-products-black-background_23-2147899430.jpg)
-  }
-} */
-
+ 
 body {
   
   background-image: url(https://d.wpimg.pl/48195718--2104334001/kosmetyki.jpg);
-}
-
-@media screen and (max-width: 600px) {
-  h1 {
-    display: none;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  #form {
-   text-align: center;
-   font-size: 5px;
-  }
- 
 }
 
 body {
